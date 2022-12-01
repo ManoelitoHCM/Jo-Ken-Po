@@ -1,0 +1,58 @@
+<meta charset="UTF-8">
+
+<script>
+
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+    
+var mao1 = prompt('Escolha entre pedra, papel e tesoura. Digite "sair" caso deseje encerrar o programa.')
+
+var mao2 = getRandomInt(1, 3)
+
+if(mao1 == 'pedra') {
+    switch(mao2) {
+        case 1:
+            document.write('A mão escolhida foi pedra, e a do computador foi pedra e o resultado foi "Empate".');
+            break;
+        case 2:
+            document.write('A mão escolhida foi pedra, e a do computador foi papel e o resultado foi "Usuário perdeu".');
+            break;
+        case 3:
+            document.write('A mão escolhida foi pedra, e a do computador foi tesoura e o resultado foi "Usuário ganhou".');
+            break;
+        default: 
+            document.write('Houve um erro na escolha da mão.');
+    }
+}   else if(mao1 == 'papel') {
+        switch(mao2) {
+            case 1:
+                document.write('A mão escolhida foi papel, e a do computador foi pedra e o resultado foi "Usuário ganhou".');
+                break;
+            case 2:
+                document.write('A mão escolhida foi papel, e a do computador foi papel e o resultado foi "Empate".');
+                break;
+            case 3: 
+                document.write('A mão escolhida foi papel, e a do computador foi tesoura e o resultado foi "Usuário perdeu".');
+                break;
+            default: 
+                document.write('Houve um erro na escolha da mão.');
+        }
+    }   else if(mao1 == 'tesoura') {
+            switch(mao2) {
+                case 1:
+                    document.write('A mão escolhida foi tesoura, e a do computador foi pedra e o resultado foi "Usuário perdeu".');
+                    break;
+                case 2:
+                    document.write('A mão escolhida foi tesoura, e a do computador foi papel e o resultado foi "Usuário ganhou".');
+                    break;
+                case 3: 
+                    document.write('A mão escolhida foi tesoura, e a do computador foi tesoura e o resultado foi "Empate".');
+                    break;
+                default: 
+                    document.write('Houve um erro na escolha da mão.');
+            }
+        }
+</script>
